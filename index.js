@@ -1,11 +1,9 @@
-//function to fandomize password
+//what will be displayed before clicking the button. 
+document.getElementById('output').value=('Click to get your Password')
 
 
-document.getElementById('output').value=('zero')
 //function to generate the password. 
-
 const genpasword = () => {
-    //var PasswordValue=document.getElementById('output');
 let passLength = 12;
 let PasswordChar = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let PasswordValue = '';
@@ -15,11 +13,16 @@ let PasswordValue = '';
         PasswordValue += PasswordChar.substring(num, num + 1);
     }
     document.getElementById('output').value = PasswordValue;
-    //return (PasswordValue);
 }
 
-//defining the three parts, Poutput, Password, and copy
-console.log(genpasword());
-console.log("hello world 2");
+//function for copying the code
+const copycode=()=>
+{
+    var copy = document.getElementById("output");
+    copy.select();
+    copy.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    alert('Password Copied! account secured... if you use our password');
+}
 
 
