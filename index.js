@@ -1,5 +1,5 @@
 //what will be displayed before clicking the button. 
-document.getElementById('output').value=('Click to get your Password')
+//document.getElementById('output').value=('Click to get your Password')
 
 
 //function to generate the password. 
@@ -24,5 +24,12 @@ const copycode=()=>
     document.execCommand("copy");
     alert('Password Copied! account secured... if you use our password');
 }
+
+ const resetCode=()=>{
+    
+   
+    document.getElementById('output').value= "";
+     
+ }
 
 
